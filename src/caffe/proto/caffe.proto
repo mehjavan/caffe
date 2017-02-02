@@ -420,7 +420,11 @@ message GradientScalerParameter {
   optional float alpha = 3 [default = 10.0];
   optional float max_iter = 4 [default = 1];
 }
-
+message Slice {
+  repeated uint32 dim = 1;
+  repeated uint32 stride = 2;
+  repeated uint32 offset = 3;
+}
 message ImageLabelDataParameter {
   // Specify the data source.
   optional string image_list_path = 1;
